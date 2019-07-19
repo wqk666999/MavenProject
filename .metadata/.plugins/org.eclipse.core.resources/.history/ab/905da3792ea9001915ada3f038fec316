@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="test/welcome">Hello world!</a>
+	
+	<form action="test/request/666" method="post">
+		id：<input name="id" type="text" /><br/>
+		name:<input name="name" type="text"/><br/>
+		age:<input name="age" type="text"/><br/>
+		<input type="submit" value="提交"/>
+	</form>
+	
+	<form action="test/testmodelandview" method="post">
+		id：<input name="id" type="text" /><br/>
+		name:<input name="name" type="text"/><br/>
+		age:<input name="age" type="text"/><br/>
+		<input type="submit" value="提交"/>
+	</form>
+</body>
+</html>

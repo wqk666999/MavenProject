@@ -1,0 +1,32 @@
+package com.test.ysu.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.test.ysu.entity.Student;
+
+//接口/类/注解/配置
+@Controller
+@RequestMapping("test")
+public class SpringmvcController {
+
+	@RequestMapping(value="welcome")
+	public String welcome() {	
+		return "success";
+	}
+	@RequestMapping(value="request/{shuzi}")
+	public String getStudentInfo(@PathVariable("shuzi") Integer shhzi,Student stu) {
+		System.out.println(shhzi);
+		System.out.println("id"+stu.getId()+"name"+stu.getName());
+		return "success";
+	}
+	@RequestMapping(value="testmodelandview")
+	public ModelAndView testmodelandview(Student stu)
+	{
+		ModelAndView mv=new ModelAndView("success");
+		mv.addObject("student", stu);
+		return mv;
+	}
+}

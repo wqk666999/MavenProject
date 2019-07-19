@@ -1,0 +1,5 @@
+package com.test.ysu.entity;
+
+public class Student {
+
+}
